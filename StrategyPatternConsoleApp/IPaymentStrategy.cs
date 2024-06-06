@@ -1,7 +1,6 @@
-﻿namespace StrategyPatternConsoleApp
+﻿namespace StrategyPatternConsoleApp;
+
+public interface IPaymentStrategy
 {
-    public interface IPaymentStrategy
-    {
-        void ProcessPayment(decimal amount);
-    }
+    void ProcessPayment(decimal amount);
 }
