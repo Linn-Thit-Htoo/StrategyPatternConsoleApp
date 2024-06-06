@@ -1,17 +1,16 @@
-﻿namespace StrategyPatternConsoleApp
+﻿namespace StrategyPatternConsoleApp;
+
+public class PaymentProcessor
 {
-    public class PaymentProcessor
+    private readonly IPaymentStrategy _paymentStrategy;
+
+    public PaymentProcessor(IPaymentStrategy paymentStrategy)
     {
-        private readonly IPaymentStrategy _paymentStrategy;
+        _paymentStrategy = paymentStrategy;
+    }
 
-        public PaymentProcessor(IPaymentStrategy paymentStrategy)
-        {
-            _paymentStrategy = paymentStrategy;
-        }
-
-        public void ProcessPayment(decimal amount)
-        {
-            _paymentStrategy.ProcessPayment(amount);
-        }
+    public void ProcessPayment(decimal amount)
+    {
+        _paymentStrategy.ProcessPayment(amount);
     }
 }
