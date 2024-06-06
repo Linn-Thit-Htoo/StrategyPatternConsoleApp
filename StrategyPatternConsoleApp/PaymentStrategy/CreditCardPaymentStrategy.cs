@@ -1,10 +1,9 @@
-﻿namespace StrategyPatternConsoleApp.PaymentStrategy
+﻿namespace StrategyPatternConsoleApp.PaymentStrategy;
+
+public class CreditCardPaymentStrategy : IPaymentStrategy
 {
-    public class CreditCardPaymentStrategy : IPaymentStrategy
+    public void ProcessPayment(decimal amount)
     {
-        public void ProcessPayment(decimal amount)
-        {
-            Console.WriteLine("Credit Card payment is processing...");
-        }
+        Console.WriteLine("Credit Card payment is processing...");
     }
 }
