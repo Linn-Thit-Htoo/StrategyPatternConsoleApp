@@ -1,10 +1,9 @@
-﻿namespace StrategyPatternConsoleApp.PaymentStrategy
+﻿namespace StrategyPatternConsoleApp.PaymentStrategy;
+
+public class PayPalPaymentStrategy : IPaymentStrategy
 {
-    public class PayPalPaymentStrategy : IPaymentStrategy
+    public void ProcessPayment(decimal amount)
     {
-        public void ProcessPayment(decimal amount)
-        {
-            Console.WriteLine("PayPal payment is processing...");
-        }
+        Console.WriteLine("PayPal payment is processing...");
     }
 }
